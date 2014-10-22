@@ -1,12 +1,16 @@
 require_relative 'game_loader'
 
-puts "What would you like to create? (Location or Path)"
-thing = gets.chomp
+puts 'You are in the middle of EvilCastleLand, what is the map?:'
 
-module_to_call = Module.const_get("#{thing.capitalize}Helper")
+loop do
+  puts 'What would you like to create? (Location or Path)'
+  thing = gets.chomp
 
-new_thing = module_to_call.send("#{thing.downcase}_maker")
+  module_to_call = Module.const_get("#{thing.capitalize}Helper")
+  new_thing = module_to_call.send("#{thing.downcase}_maker")
+  module_to_call.send("#{thing.downcase}_setup", new_thing)
+  puts Location.current_location
+  break if LocationHelper.ending_location? Location.current_location
+end
 
-module_to_call.send("#{thing.downcase}_setup", new_thing)
-
-puts Location.all_names
+# puts Location.all_names

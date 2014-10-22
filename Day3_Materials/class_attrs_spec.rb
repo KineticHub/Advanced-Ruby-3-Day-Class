@@ -9,12 +9,12 @@ end
 
 describe 'Class Attr Accessors' do
 
-  it "should add class variable reader" do
-    Thing.send(:class_variable_set, "@@count", 2)
+  it 'should add class variable reader' do
+    Thing.send(:class_variable_set, '@@count', 2)
     Thing.count.should eq 2
   end
 
-  it "should add class variable writer" do
+  it 'should add class variable writer' do
     Thing.count = 4
     Thing.count.should eq 4
   end

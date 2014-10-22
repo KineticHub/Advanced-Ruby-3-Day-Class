@@ -8,7 +8,16 @@ class Location
     all.map{|l| l.name}
   end
 
+  def self.current_location
+    @@current
+  end
+
+  def current_location=(name)
+    @@current = name
+  end
+
   @@locations = []
+  @@current = ''
 
   attr_accessor :name
 

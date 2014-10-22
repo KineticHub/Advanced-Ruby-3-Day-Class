@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Blocks.iml" filepath="$PROJECT_DIR$/.idea/Blocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Concurrency_and_MultiThreading/.idea/Concurrency_and_MultiThreading.iml" filepath="$PROJECT_DIR$/../Concurrency_and_MultiThreading/.idea/Concurrency_and_MultiThreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Day3_Materials/.idea/Day3_Materials.iml" filepath="$PROJECT_DIR$/../Day3_Materials/.idea/Day3_Materials.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Game_of_Life/.idea/Game_of_Life.iml" filepath="$PROJECT_DIR$/../Game_of_Life/.idea/Game_of_Life.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Game_of_Life_2/.idea/Game_of_Life_2.iml" filepath="$PROJECT_DIR$/../Game_of_Life_2/.idea/Game_of_Life_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Gems/.idea/Gems.iml" filepath="$PROJECT_DIR$/../Gems/.idea/Gems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TDD/.idea/TDD.iml" filepath="$PROJECT_DIR$/../TDD/.idea/TDD.iml" />
+    </modules>
+  </component>
+</project>
+
