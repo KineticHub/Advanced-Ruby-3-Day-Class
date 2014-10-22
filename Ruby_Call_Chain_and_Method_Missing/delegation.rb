@@ -1,29 +1,37 @@
-class Invoice
-  attr_reader :amount_owed, :amount_paid
+require_relative 'tax_calculator'
+require 'forwardable'
 
-  def initialize options = Hash.new(0.0)
-    @amount_owed = options[:amount_owed]
-    @amount_paid = options[:amount_paid]
+class Invoice
+  extend Forwardable
+
+  def_delegators :@tax_calc, :tax_country, :tax_state
+
+  def initialize(options)
+    options[:tax_state] = 'WA'
+    options[:tax_country] = 'USA'
+    @tax_calc = TaxCalculator.new(options)
   end
 
   def total_amount
-   (@amount_owed + tax_amount_owed) - @amount_paid
+    @tax_calc.total_amount
   end
 
   def tax_amount_owed
-    (@amount_owed * tax_rate).round(2)
+    @tax_calc.tax_amount_owed
   end
 
-  def tax_rate
-    # some crazy lookup based on state and country
-    (state_tax_rate("WA") + country_tax_rate("USA")).round(2)
+  # def respond_to? (name)
+  #   return true if should_call_tax_calc? name
+  #   super(name)
+  # end
+  #
+  # # could do logic here to decide
+  # def should_call_tax_calc?(name)
+  #   @tax_calc.methods
+  # end
+
+  def method_missing (name, *args, &block)
+    @tax_calc.send(name, *args, &block)
   end
 
-  def state_tax_rate state
-    0.05
-  end
-
-  def country_tax_rate country
-    0.10
-  end
 end

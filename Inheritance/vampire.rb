@@ -1,17 +1,21 @@
 require_relative 'monster.rb'
 
 class Vampire < Monster
+
+  DEFAULT_VULS = [:garlic, :sunlight]
+  DEFAULT_DANGERS = [:bites]
+
   attr_reader :coffin_location
 
-  def initialize coffin_location, noc=true, legs=2, name ="Vampire", vul=[:garlic, :sunlight], dangers=[:bites]
+  def initialize(coffin_location, noc=true, legs=2, name ='Vampire', vul=[:garlic, :sunlight], dangers=[:bites])
     @coffin_location = coffin_location
-    @am_i_human      = true
+    @am_i_human = true
 
     super noc, legs, name, vul, dangers
   end
 
-  def drink blood
-    puts "Yummm!"
+  def drink (blood)
+    puts 'Yummm!'
   end
 
   def is_bat?
@@ -26,13 +30,13 @@ class Vampire < Monster
     other_vamp.turn_into_bat self
   end
 
-  def attack! human
-    puts "hi from Vampire"
+  def attack! (human)
+    puts 'hi from Vampire'
   end
 
 protected
 
-  def turn_into_bat calling_vamp
+  def turn_into_bat(calling_vamp)
     puts "Vampire #{calling_vamp.name} turned #{self.name} into a BAT!"
     @am_i_human = false
   end
@@ -43,4 +47,5 @@ private
     puts "I'm now human."
     @am_i_human = true
   end
+
 end

@@ -1,7 +1,7 @@
 require_relative 'monster'
 class Mummy < Monster
 
-  def initialize options={}
+  def initialize(options={})
     options[:nocturnal] = true if options[:nocturnal].nil?
     options[:legs] ||= 2
 
@@ -9,11 +9,11 @@ class Mummy < Monster
           options[:vulnerabilities], options[:dangers]
   end
 
-  def test_whisper mummy
+  def test_whisper(mummy)
     mummy.whisper_creepily
   end
 
-  def test_noc_set mummy
+  def test_noc_set(mummy)
     mummy.set_nocturnal_to_false
   end
 

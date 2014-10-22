@@ -3,11 +3,11 @@ require_relative './fake_enumerable'
 class SortedList
   include FakeEnumerable
 
-  def initialize *args
+  def initialize(*args)
     @data = args
   end
 
-  def << new_element
+  def <<(new_element)
     @data << new_element
     @data.sort!
 

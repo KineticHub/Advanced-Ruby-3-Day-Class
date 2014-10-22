@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Blocks.iml" filepath="$PROJECT_DIR$/.idea/Blocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Enumerable/.idea/Enumerable.iml" filepath="$PROJECT_DIR$/../Enumerable/.idea/Enumerable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Inheritance/.idea/Inheritance.iml" filepath="$PROJECT_DIR$/../Inheritance/.idea/Inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Meta_Programming/.idea/Meta_Programming.iml" filepath="$PROJECT_DIR$/../Meta_Programming/.idea/Meta_Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Ruby_Call_Chain_and_Method_Missing/.idea/Ruby_Call_Chain_and_Method_Missing.iml" filepath="$PROJECT_DIR$/../Ruby_Call_Chain_and_Method_Missing/.idea/Ruby_Call_Chain_and_Method_Missing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TDD/.idea/TDD.iml" filepath="$PROJECT_DIR$/../TDD/.idea/TDD.iml" />
+    </modules>
+  </component>
+</project>
+
