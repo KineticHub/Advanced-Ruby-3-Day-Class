@@ -1,8 +1,8 @@
 require_relative 'require'
 class Cell
 
-  ALIVE = 'ALIVE'
-  DEAD = 'DEAD'
+  ALIVE = 1
+  DEAD = 0
 
   attr_accessor :next_state, :current_state
 
